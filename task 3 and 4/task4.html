@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            letter-spacing: 2px;
+            transition: all ease-in-out 1s;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .container {
+            background-position: center;
+            background-repeat: none;
+            background-size: cover;
+            height: 70%;
+            width: 30%;
+            position: relative;
+            
+        }
+
+        #img1 {
+            background-image: url("20210617_080821-02.jpeg");
+        }
+
+        #img2 {
+            background-image: url("20210928_134928.jpg");
+        }
+
+        #img3 {
+            background-image: url("Picsart_22-02-10_16-58-15-039.jpg");
+        }
+
+        h2 {
+            color: rgb(30, 28, 28);
+            height: 40%;
+            width: 100%;
+            text-align: center;
+            padding-top: 20%;
+            background-color: rgba(255, 255, 255, 0.345);
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+        }
+        .modify{
+            height: 100%;
+            backdrop-filter: blur(4px);
+            padding-top:50%;
+            letter-spacing: 4px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="img1">
+        <h2>Vehicle</h2>
+    </div>
+    <div class="container" id="img2">
+        <h2>Plants</h2>
+    </div>
+    <div class="container" id="img3">
+        <h2>Monuments</h2>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
+        </script>
+    <script>
+    $(document).ready(function(){
+        var list=document.getElementsByClassName("container")
+        var list2=document.getElementsByTagName("h2");
+     $(list[0]).hover(function(){
+      $(list2[0]).toggleClass("modify");
+     });
+     $(list[1]).hover(function(){
+      $(list2[1]).toggleClass("modify");
+     });
+     $(list[2]).hover(function(){
+      $(list2[2]).toggleClass("modify");
+     });
+    });
+    </script>
+</body>
+
+</html>
