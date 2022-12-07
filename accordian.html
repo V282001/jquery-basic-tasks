@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            padding-top: 100px;
+        }
+        h1,p{
+            background-color: aqua;
+            margin: auto;
+            width: 40%;
+            padding: 10px;
+        }
+        p{
+            background-color: burlywood;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>click me 1</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nostrum ipsum iusto qui impedit minus necessitatibus quas commodi ratione. Perspiciatis!</p>
+    <h1>click me 2</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sit qui perspiciatis adipisci ducimus deleniti earum dicta quidem autem dolorum?</p>
+    <h1>click me 3</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore minus necessitatibus culpa voluptas perferendis id facere odio non optio quod!</p>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+        var temp=0;
+        var head=document.getElementsByTagName("h1");
+        var para=document.getElementsByTagName("p");
+         $(head[0]).click(function(){
+            $("h1").next("p").slideUp("fast");
+            $(this).next("p").slideToggle("fast");
+         });
+         $(head[1]).click(function(){
+            $("h1").next("p").slideUp("fast");
+            $(this).next("p").slideToggle("fast");
+         });
+         $(head[2]).click(function(){
+            $("h1").next("p").slideUp("fast");
+            $(this).next("p").slideToggle("fast");
+         });
+    });
+  </script>
+</html>
